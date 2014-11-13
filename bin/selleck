@@ -197,6 +197,8 @@ if (options.server) {
     theme.meta     = selleck.getMetadata(options.theme, 'theme');
     theme.partials = selleck.getPartials(options.theme);
 
+    selleck.useSelleckfileIfAvailable();
+
     // Traverse the root path and look for documentation directories.
     docs = selleck.findDocs(options.rootPath, docs);
 
