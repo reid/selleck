@@ -187,6 +187,8 @@ options.rootPath = args.shift() || process.cwd();
 
 options['out-assets'] || (options['out-assets'] = fsPath.join(options.out, 'assets'));
 
+selleck.useSelleckfileIfAvailable();
+
 if (options.server) {
     // If running as a server, start the server instead of continuing.
     require('../lib/server')(options);
@@ -196,8 +198,6 @@ if (options.server) {
     theme.layouts  = selleck.getLayouts(options.theme);
     theme.meta     = selleck.getMetadata(options.theme, 'theme');
     theme.partials = selleck.getPartials(options.theme);
-
-    selleck.useSelleckfileIfAvailable();
 
     // Traverse the root path and look for documentation directories.
     docs = selleck.findDocs(options.rootPath, docs);
