@@ -188,7 +188,7 @@ options.rootPath = args.shift() || process.cwd();
 options['out-assets'] || (options['out-assets'] = fsPath.join(options.out, 'assets'));
 
 selleck.useSelleckfileFromDirectory(options.theme);
-selleck.useSelleckfileFromDirectory(process.cwd());
+selleck.useSelleckfileFromDirectory(options.rootPath);
 
 if (options.server) {
     // If running as a server, start the server instead of continuing.
