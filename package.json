@@ -1,7 +1,7 @@
 {
   "name": "reid-selleck",
   "description": "Generator for YUI's Handlebars-based user documentation.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Reid Burke <me@reidburke.com>",
   "copyright": "Copyright (c) 2012 Yahoo! Inc. All rights reserved.",
   "bugs": {
